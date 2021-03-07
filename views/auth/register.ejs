@@ -1,0 +1,67 @@
+<div class="container h-100">
+  
+  <form
+    class="form-horizontal d-flex justify-content-center align-self-center mt-5 ml-5"
+    action="/register"
+    method="POST"
+  >
+    <fieldset class="d-flex flex-column justify-content-center mx-auto">
+      <div id="legend">
+        <legend class="">Register Page</legend>
+      </div>
+      <% if(messages.error){%>
+      <span class="text-danger fs-5"><%= messages.error%></span>
+      <% }%>
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label" for="username">Username</label>
+        <div class="controls">
+          <input
+            type="text"
+            id="username"
+            name="name"
+            value="<%= messages.name%>"
+            placeholder="Enter your name"
+            class="input-xlarge px-2 mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- E-mail -->
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input
+          value="<%= messages.email%>"
+            type="text"
+            id="email"
+            name="email"
+            placeholder=""
+            class="input-xlarge px-2 mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder=""
+            class="input-xlarge px-2 mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls mt-2">
+          <button class="btn btn-success" type="submit">Register</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

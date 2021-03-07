@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.carousel-item img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 900px;
+}
+
+.nav-item {
+  margin-left: 1.3rem;
+
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  padding: 1.6rem 0;
+}
+
+footer #registre-label {
+  margin-right: 3rem;
+}
+
+footer #signup-btn {
+  background: #ff4d4d;
+  color: #a6a6a6;
+  border-radius: 20px;
+}
+
+footer #signup-btn:hover {
+  box-shadow: 0px 1px 10px -2px rgba(166, 166, 166, 1);
+  color: black;
+}
+footer #signup-btn span {
+  font-size: 1.3rem;
+}
+
+.form-horizontal {
+  display: block;
+  justify-content: center;
+}
+.read-container{
+  background-color: #f2f2f2;
+  overflow-wrap: break-word;
+  width: 50rem;
+}
+.publish-date{
+border-bottom: 1px dotted #808080;
+}
+
+.publish-date span{
+  font-weight: bold;
+}
+
+.heading-text {
+  font-size: 1rem;
+  border-bottom: 2px solid #808080;
+}
+.heading-text span{
+  font-weight: bold;
+}
+.text-content {
+  font-size: 1.5rem;
+}
+
+.text-content h4{
+  font-weight: bold;
+  font-size: 1.8rem;
+}

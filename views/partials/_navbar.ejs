@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <div class="container">
+    <a class="navbar-brand fs-3" href="/">Bloggy</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-20 mx-auto mb-lg-0 p-1">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+       
+
+        <%if(user){%>
+          <li class="nav-item">
+            <a class="nav-link" href="/compose">compose</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blogs</a>
+          </li>
+        <li class="nav-item">
+          <form id="logout" action="/logout" method="POST">
+            <a
+              onclick="document.getElementById('logout').submit()"
+              class="nav-link" href="#"
+              >Logout</a
+            >
+          </form>
+        </li>
+        <%} else {%>
+          
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+        <% }%>
+      </ul>
+    </div>
+  </div>
+</nav>

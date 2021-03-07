@@ -1,0 +1,24 @@
+<div class="container">
+  <form action="/edit/<%= blog._id%>" method="POST" class="mt-5">
+    <h3 class="mb-3 text-center">Edit your Blog here....😍😍</h3>
+    <input
+      type="text"
+      value="<%= blog.title%>"
+      name="title"
+      placeholder="Enter Title"
+      class="form-control"
+    />
+
+    <textarea
+      name="content"
+      cols="30"
+      rows="10"
+      class="mt-2 form-control"
+      placeholder="Enter Content here..."
+      required
+    >
+  <%= blog.content%></textarea
+    >
+    <input type="submit" value="compose" class="btn btn-md btn-danger mt-2" />
+  </form>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+  <form
+    class="form-horizontal d-flex justify-content-start"
+    action="/login"
+    method="POST"
+  >
+    <fieldset class="d-flex flex-column justify-content-center mx-auto">
+      <div id="legend">
+        <legend class="">Login Page</legend>
+      </div>
+      <% if(messages.error){%>
+      <span class="text-danger fs-5"><%= messages.error%></span>
+      <% }%>
+
+      <div class="control-group">
+        <!-- E-mail -->
+        <label class="control-label" for="email">Email</label>
+        <div class="controls">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder=""
+            class="input-xlarge px-2 mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder=""
+            class="input-xlarge px-2 mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls mt-2">
+          <button class="btn btn-success" type="submit">Login</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
