@@ -5,14 +5,14 @@ const express = require("express");
 const app = express();
 const ejs = require("ejs");
 const ejsLayouts = require("express-ejs-layouts");
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 const path = require("path");
 const bodyParser = require("body-parser");
 const flash = require("express-flash");
 const session = require("express-session");
 const MongoDbStore = require("connect-mongo").default;
 const mongoose = require("mongoose");
-const passport=require('passport')
+const passport = require("passport");
 
 // DATA BASE
 mongoose.connect(process.env.DB, {
@@ -27,8 +27,6 @@ db.once("open", () => {
 }).catch((err) => {
   console.log("unbale to connect ", err);
 });
-
-
 
 // SESSION CONFIG //required cookies to run
 app.use(
@@ -46,17 +44,16 @@ app.use(
 
 // passport config
 // passport statergy
-const passportInit = require('./config/passport')
+const passportInit = require("./config/passport");
 passportInit(passport);
-app.use(passport.initialize())
-app.use(passport.session())
-
+app.use(passport.initialize());
+app.use(passport.session());
 
 // global middleware
 app.use((req, res, next) => {
-  res.locals.user = req.user
-  next()
-})
+  res.locals.user = req.user;
+  next();
+});
 
 // middleware
 app.use(express.urlencoded({ extended: false }));
