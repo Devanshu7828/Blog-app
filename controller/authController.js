@@ -32,7 +32,6 @@ function authController() {
       res.render("auth/register");
     },
     async postregister(req, res) {
-      console.log(req.body);
       const { name, email, password } = req.body;
       // Validate request
       if (!name || !email || !password) {
@@ -54,7 +53,7 @@ function authController() {
 
         // hash the password
         const hashPassword = await bcrypt.hash(password, 10);
-        console.log(hashPassword);
+
         // Create a user in db
         const user = new User({
           name,
@@ -76,9 +75,9 @@ function authController() {
       });
     },
     logout(req, res) {
-      req.logout()
-      return res.redirect('/')
-    }
+      req.logout();
+      return res.redirect("/");
+    },
   };
 }
 
