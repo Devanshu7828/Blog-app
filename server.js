@@ -15,11 +15,14 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 // DATA BASE
-mongoose.connect(process.env.DB, {
-  useCreateIndex: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://new_blog:Ed3vW7vNuVnlvOdQ@cluster0.wscyo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const db = mongoose.connection;
 db.once("open", () => {
@@ -31,7 +34,7 @@ db.once("open", () => {
 // SESSION CONFIG //required cookies to run
 app.use(
   session({
-    secret: process.env.COOKIE_SECRET,
+    secret: 'thisismysecre',
     resave: false,
     //TO STORE SESSION IN DB
     store: MongoDbStore.create({ mongoUrl: process.env.DB }),
