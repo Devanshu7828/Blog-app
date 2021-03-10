@@ -64,7 +64,7 @@ function authController() {
         user
           .save()
           .then((user) => {
-            // Login automaticaly
+            // Login automaticaly create brand
 
             return res.redirect("/");
           })
