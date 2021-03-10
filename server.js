@@ -34,11 +34,12 @@ db.once("open", () => {
 // SESSION CONFIG //required cookies to run
 app.use(
   session({
-    secret: 'thisismysecre',
+    secret: "thisismysecre",
     resave: false,
     //TO STORE SESSION IN DB
     store: MongoDbStore.create({ mongoUrl: process.env.DB }),
     collection: "sessions",
+
     saveUninitialized: false,
 
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, //24 HOURS
@@ -55,6 +56,7 @@ app.use(passport.session());
 // global middleware
 app.use((req, res, next) => {
   res.locals.user = req.user;
+
   next();
 });
 
