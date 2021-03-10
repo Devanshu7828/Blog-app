@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
-body{
-  font-family: 'Lato', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+body {
+  font-family: "Lato", sans-serif;
   /* overflow-y: hidden; */
-  
 }
 
 /* .carousel-item img {
@@ -13,15 +12,16 @@ body{
   height: 900px;
 } */
 
-.carousel-item img { 
+.carousel-item img {
   background-size: cover;
-  
-   height:648px; }
+
+  height: 648px;
+}
 
 .nav-item {
   margin-left: 1.3rem;
 
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -54,16 +54,16 @@ footer #signup-btn span {
   display: block;
   justify-content: center;
 }
-.read-container{
+.read-container {
   background-color: #f2f2f2;
   overflow-wrap: break-word;
   width: 50rem;
 }
-.publish-date{
-border-bottom: 1px dotted #808080;
+.publish-date {
+  border-bottom: 1px dotted #808080;
 }
 
-.publish-date span{
+.publish-date span {
   font-weight: bold;
 }
 
@@ -71,18 +71,19 @@ border-bottom: 1px dotted #808080;
   font-size: 1rem;
   border-bottom: 2px solid #808080;
 }
-.heading-text span{
+.heading-text span {
   font-weight: bold;
 }
 .text-content {
   font-size: 1.5rem;
 }
 
-.text-content h4{
+.text-content h4 {
   font-weight: bold;
   font-size: 1.8rem;
 }
 
-#registre-label,#signup-btn{
+#registre-label,
+#signup-btn {
   height: 2.5rem;
 }
