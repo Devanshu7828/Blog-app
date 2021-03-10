@@ -16,7 +16,7 @@ const passport = require("passport");
 
 // DATA BASE
 mongoose.connect(
-  "mongodb+srv://new_blog:Ed3vW7vNuVnlvOdQ@cluster0.wscyo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://rajak:d79euTVHDllih68H@cluster0.a8crv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useCreateIndex: true,
     useNewUrlParser: true,
