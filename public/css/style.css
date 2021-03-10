@@ -16,7 +16,7 @@ body{
 .nav-item {
   margin-left: 1.3rem;
 
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 footer {
@@ -24,7 +24,7 @@ footer {
   text-align: center;
   justify-content: center;
   color: #fff;
-  padding: 1.6rem 0;
+  padding: 1.1rem 0;
 }
 
 footer #registre-label {
@@ -76,4 +76,8 @@ border-bottom: 1px dotted #808080;
 .text-content h4{
   font-weight: bold;
   font-size: 1.8rem;
+}
+
+#registre-label,#signup-btn{
+  height: 2.5rem;
 }
